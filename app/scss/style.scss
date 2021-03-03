@@ -199,6 +199,7 @@
     &-autor{
         display: flex;
         align-items: center;
+        max-width: 245px;
         .avatar{
             width: 30px;
             height: 30px;
@@ -211,11 +212,18 @@
         }
         span{
             font-size: 14px;
-        font-weight: 500;
+            font-weight: 500;
         
-        }
-        
+            }
     }
+    &-star{
+        font-size: 12px;
+        span{
+            color: $bg;
+        }
+    }
+        
+    
 }
 .products__bottom-btn{
     text-align: center;
@@ -234,3 +242,13 @@
         
     }
 }
+//end products
+
+
+//start product-slider
+
+.product-slider{                        
+    padding: 110px 0px 120px;
+
+}
+//end product-slider
