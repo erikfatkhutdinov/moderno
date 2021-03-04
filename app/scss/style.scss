@@ -386,3 +386,42 @@
     }
 }
 //end advantages
+
+//start author
+
+.author{
+    background-position: center;
+    background-repeat: no-repeat;
+    block-size: cover;
+    min-height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__box{
+        background-color: $green;
+        max-width: 650px;
+        width: 100%;
+        height: 215px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__title{
+        font-size: 30px;
+        line-height: 30px;
+        color: #fff;
+        margin-right: 45px;
+        max-width: 290px;
+        span{
+            @include f700;
+        }
+    }
+    &__link{
+        font-size: 18pz;
+        line-height: 36px;
+        padding: 14px 40px;
+        background-color: #fff;
+    }
+}
+
+//end author
