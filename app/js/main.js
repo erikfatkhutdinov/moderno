@@ -12,7 +12,7 @@ $(function () {
         slidesToScroll: 4,
     });
 
-    $(".rate-star").rateYo({
+    $(".rate-star.rate-star.rate-star").rateYo({
         rating: 5,
         startWidth: "12px",
         readOnly: true,
