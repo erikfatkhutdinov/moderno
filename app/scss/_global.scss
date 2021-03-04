@@ -19,6 +19,7 @@ li{
 }
 body{
     font-family: 'Roboto-Regular', sans-serif;
+    font-weight: 400;
     font-size: 15px;
     line-height: 24px;
     color: $text;
@@ -42,11 +43,10 @@ body{
 .title{
     text-align: center;
     color: $bg;
-    font-weight: 700;
+    @include f700;
     font-size: 36px;
     line-height: 60px;
     margin-bottom: 30px;
-
 }
 .rate-star {
     display: inline-block;
