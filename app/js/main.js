@@ -1,15 +1,15 @@
 $(function () {
 
-    let mixer = mixitup('.products__inner-box');
 
-    // $(".js-range-slider").ionRangeSlider({
-    //     type: "double",
-    //     min: 0,
-    //     max: 1000,
-    //     from: 0,
-    //     to: 600,
-    //     prefix: "$"
-    // });
+
+    $(".js-range-slider").ionRangeSlider({
+        type: "double",
+        min: 0,
+        max: 1000,
+        from: 0,
+        to: 600,
+        prefix: "$"
+    });
 
 
 
@@ -27,7 +27,15 @@ $(function () {
         readOnly: true,
     });
 
+    $('.menu__btn').on('click', function(){
+        $('.menu__list').slideToggle();
+    });
+
     
+    $('.header__btn-menu').on('click', function () {
+        $('.header__box').toggleClass('active');
+    });
 
 
+    let mixer = mixitup('.products__inner-box');
 });

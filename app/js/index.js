@@ -1,5 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
 
+    
     const list = document.querySelector('.icon-th-list')
     const large = document.querySelector('.icon-th-large')
     const productItems = document.querySelectorAll('.product__item')
@@ -16,4 +17,6 @@ window.addEventListener('DOMContentLoaded', () => {
         large.classList.add('active');
     })
 
+    
+    
 }) 
