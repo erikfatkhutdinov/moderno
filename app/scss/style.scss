@@ -2140,9 +2140,9 @@
             background-color: #f1f4f5;
             width: 350px;
             margin-bottom: 30px;
-            
 
-            &::placeholder{
+
+            &::placeholder {
                 color: #7a7a7a;
 
             }
@@ -2190,7 +2190,131 @@
     }
 }
 
-//endcontact
+//end contact
+
+//start settings
+.settings__tabs {
+    display: flex;
+}
+
+.tabs {
+    background-color: #fff;
+    margin-right: 30px;
+    max-width: 270px;
+    width: 100%;
+    border: 1px solid #dcdcdc;
+    max-height: 306px;
+
+
+    .tabs-active {
+        color: $bg;
+        border-bottom: 3px solid $green;
+
+        &::before {
+            color: $green;
+        }
+    }
+
+    &-titles {
+        @include f500;
+        font-size: 14px;
+        color: #707070;
+        padding: 18px 50px;
+        position: relative;
+        cursor: pointer;
+
+        &+.tabs-titles {
+            border-top: 1px solid #dcdcdc;
+        }
+
+
+
+        &::before {
+            content: "\f105";
+            position: absolute;
+            font-family: "icomoon";
+            color: #444;
+            left: 22px;
+            font-size: 14px;
+        }
+    }
+}
+
+.tabs-content {
+    background-color: #fff;
+    width: 100%;
+    margin-bottom: 152px;
+
+    .item-active{
+        display: block;
+    }
+}
+
+.page-box-content{
+    margin-bottom: 25px;
+}
+
+.page-box {
+    display: none;
+
+    &__title {
+        border-bottom: 1px solid #dcdcdc;
+        font-size: 24px;
+        color: $bg;
+        padding: 20px 40px 23px;
+    }
+
+    .personal-info {
+        color: #444;
+        margin-left: 40px;
+        padding-top: 42px;
+        position: relative;
+
+        input{
+            position: absolute;
+            left: 252px;
+            top: 34px;
+            border: 1px solid #dedede;
+            background-color: #f9f9f9;
+            height: 40px;
+            width: 540px;
+            padding-left: 15px;
+
+        }
+
+        select{
+            position: absolute;
+            left: 252px;
+            top: 34px;
+            border: 1px solid #dedede;
+            background-color: #f9f9f9;
+            height: 40px;
+            width: 540px;
+            padding-left: 15px;
+        }
+    }
+
+    button{
+        color: #fff;
+        text-align: center;
+        background-color: $green;
+        width: 108px;
+        height: 46px;
+        border: none;
+        @include f500;
+        margin: 40px 0 76px 292px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 
 @import 'media';
