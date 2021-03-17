@@ -883,7 +883,7 @@
     }
 
     &__link {
-        font-size: 18pz;
+        font-size: 18px;
         line-height: 36px;
         padding: 14px 40px;
         background-color: #fff;
@@ -1875,47 +1875,49 @@
             &::before {
                 position: absolute;
                 top: 6px;
-                left: 0;
-                right: 0;
+                left: auto;
+                right: 10px;
             }
 
             &+li {
-                margin-left: 4px;
+                margin-left: 3px;
             }
         }
 
-    }
 
-    .icon {
 
-        &-meh-o {
-            background-image: url(../images/awards/orange.png);
-            width: 34px;
-            height: 37px;
-        }
+        .icon {
 
-        &-pagelines {
-            background-image: url(../images/awards/red.png);
-            width: 34px;
-            height: 37px;
-        }
+            &-meh-o {
+                background-image: url(../images/awards/orange.png);
+                width: 34px;
+                height: 37px;
 
-        &-flash {
-            background-image: url(../images/awards/blue.png);
-            width: 34px;
-            height: 37px;
-        }
+            }
 
-        &-foursquare {
-            background-image: url(../images/awards/green.png);
-            width: 34px;
-            height: 37px;
-        }
+            &-pagelines {
+                background-image: url(../images/awards/red.png);
+                width: 34px;
+                height: 37px;
+            }
 
-        &-yen {
-            background-image: url(../images/awards/grey.png);
-            width: 34px;
-            height: 37px;
+            &-flash {
+                background-image: url(../images/awards/blue.png);
+                width: 34px;
+                height: 37px;
+            }
+
+            &-foursquare {
+                background-image: url(../images/awards/green.png);
+                width: 34px;
+                height: 37px;
+            }
+
+            &-yen {
+                background-image: url(../images/awards/grey.png);
+                width: 34px;
+                height: 37px;
+            }
         }
     }
 
@@ -2245,12 +2247,12 @@
     width: 100%;
     margin-bottom: 152px;
 
-    .item-active{
+    .item-active {
         display: block;
     }
 }
 
-.page-box-content{
+.page-box-content {
     margin-bottom: 25px;
 }
 
@@ -2270,7 +2272,7 @@
         padding-top: 42px;
         position: relative;
 
-        input{
+        input {
             position: absolute;
             left: 252px;
             top: 34px;
@@ -2282,7 +2284,7 @@
 
         }
 
-        select{
+        select {
             position: absolute;
             left: 252px;
             top: 34px;
@@ -2294,7 +2296,7 @@
         }
     }
 
-    button{
+    button {
         color: #fff;
         text-align: center;
         background-color: $green;
@@ -2306,7 +2308,260 @@
     }
 }
 
+//end settings
 
+//start profile
+
+.profile {
+    &__inner {
+        display: flex;
+        margin-bottom: 30px;
+    }
+
+    &-status {
+        color: #707070;
+        font-size: 13px;
+        padding: 6px 9px 5px 30px;
+        border: 1px solid #d6d6d6;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '';
+            left: 11px;
+            top: 13px;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+        }
+    }
+
+    &-on {
+        &::before {
+            background-color: $green;
+        }
+    }
+
+    &-off {
+        &::before {
+            background-color: $red;
+        }
+    }
+
+    &__aside {
+        margin-right: 30px;
+        max-width: 270px;
+        width: 100%;
+
+        &-btn {
+            margin-bottom: 13px;
+            text-align: center;
+
+            &-message {
+                margin-bottom: 17px;
+                display: block;
+                width: 100%;
+                font-size: 16px;
+                color: #fff;
+                @include f500;
+                background-color: $text;
+                padding: 18px 10px;
+                position: relative;
+                box-shadow: 0 1px 2px 0 rgba(69, 90, 100, 0.75);
+
+
+                &::before {
+                    content: "\f003";
+                    position: absolute;
+                    font-family: "icomoon";
+                    left: 50px;
+                    top: 17px;
+                }
+            }
+
+            &-following {
+                margin-bottom: 17px;
+                display: block;
+                width: 100%;
+                font-size: 16px;
+                color: #fff;
+                @include f700;
+                background-color: $green;
+                padding: 18px 10px;
+                position: relative;
+                box-shadow: 0 1px 2px 0 rgba(69, 90, 100, 0.75);
+            }
+        }
+    }
+
+    &__content {
+        width: 100%;
+
+
+
+        .profile {
+
+            &__banner {
+                padding: 20px;
+                border: 1px solid #dedede;
+                background-color: #fff;
+                margin-bottom: 30px;
+
+                &-images {
+                    background-image: url(../images/content/banner.jpg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    min-height: 332px;
+
+                }
+            }
+
+            &__items {
+                display: flex;
+                border: 1px solid #dedede;
+            }
+
+            &__item {
+                width: 25%;
+                background-color: #fff;
+                text-align: center;
+                padding: 20px 5px 10px;
+                font-size: 14px;
+                @include f500;
+
+
+                &+.profile__item {
+                    border-left: 1px solid #dedede;
+                }
+
+
+                &-title {
+                    color: $bg;
+                }
+
+                &-content {
+                    color: #707070;
+
+                    &.profile__item-sales {
+                        color: $bg;
+                    }
+                }
+
+            }
+        }
+    }
+
+}
+
+.profile-settings {
+    .presonal-box {
+        background-color: #fff;
+        padding: 35px 40px 25px;
+        border: 1px solid #dedede;
+
+        &__title {
+            @include f700;
+            font-size: 20px;
+            margin-bottom: 25px;
+            color: $bg;
+        }
+
+        &__text {
+            margin-bottom: 45px;
+
+            p {
+                color: #707070;
+            }
+        }
+
+        &__item {
+
+            &-head {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 16px;
+            }
+
+            &-name {
+                @include f500;
+                font-size: 16px;
+                color: $bg;
+                font-style: italic;
+            }
+
+            &-number {
+                @include f700;
+                font-size: 16px;
+                color: $bg;
+            }
+
+            &-line {
+                background-color: #f4f4f4;
+                height: 15px;
+                border-radius: 3px;
+                margin-bottom: 23px;
+
+                span {
+                    display: block;
+                    border-radius: 3px;
+                    height: 15px;
+                    background-image: url(../images/pro-bar.jpg);
+                    background-repeat: repeat;
+                }
+            }
+
+        }
+    }
+
+    .tabs-titles.tabs-active{
+        &::before{
+            color: $green;
+        }
+    }
+
+    .tabs-titles {
+        &::before {
+            position: absolute;
+            font-family: "icomoon";
+            color: #d0d0d0;
+            left: 24px;
+            font-size: 14px;
+        }
+    }
+
+    .profile{
+        &-about{
+            &::before {
+                content: "\f007";
+            }
+        }
+        &-products{
+            &::before {
+                content: "\f0b1";
+            }
+        }
+        &-message{
+            &::before {
+                content: "\f003";
+            }
+        }
+        &-rewiews{
+            &::before {
+                content: "\f0e6";
+            }
+        }
+        &-followers{
+            &::before {
+                content: "\f0c0";
+            }
+        }
+    }
+}
+
+
+
+//end profile
 
 
 
